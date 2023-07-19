@@ -1,0 +1,48 @@
+<%- include("partials/header")  -%>
+<div class="Div container chat pb-2">
+    <div class="row full bg-dark text-light py-2">
+        <div class="col-2">
+            <form action="/chat" method="post">
+                <input type="text" style="display: none;" name="arrow" value="<%= sender %>">
+                <button class="btn btn-dark" type="submit" name="arrow"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div class="col-2"><img src="images/1.jpg" alt="image" class="profile"></div>
+        <div class="col-8">
+                <h6 style="margin-bottom: 0;"><%= rec %></h6>
+                <p class="act">Active Now</p>
+        </div>
+    </div> 
+    <div class="place container">
+        <% msgs.forEach(function(msg){ %>
+            <% if(sender == msg.sender && rec == msg.receiver){ %>
+                    <div class="row">   
+                        <div class="col-4"></div>
+                        <div class="col-8 d-flex align-items-end justify-content-end"><p class="sendborder bg-dark text-light p-1 border border-light"><%= msg.msg %></p></div>
+                    </div>
+                    <!-- <div class="container text-center">
+                        <p class="sendborder bg-dark text-light"><%= msg.msg %></p>
+                    </div> -->
+                <%} %>
+            <% if(rec == msg.sender && sender == msg.receiver){ %>
+                    <div class="row">   
+                        <div class="col-8 d-flex"><p class=" recborder shadow p-1 border border border-dark"> <%= msg.msg %></p></div>
+                        <div class="col-4"></div>
+                    </div>
+                    <!-- <div class="container" >
+                        <p class=" ps-2 recborder shadow"> <%= msg.msg %></p>
+                    </div> -->
+                <%}%>
+        <% }) %>
+    </div>
+    <form action="/message" method="post">
+        <input type="text" name="sender" value="<%= sender %>" style="display: none;">
+        <input type="text" name="rec" value="<%= rec %>" style="display: none;">
+        <div class="input-group input-group-sm mt-2 ">
+            <input type="text" class="form-control" name="message" placeholder="Enter a message" autocomplete="off">
+            <button type="submit" class="btn btn-dark text-light bot"><i class="fa-brands fa-telegram fa-2x"></i></button>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer")  -%>

@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+ <div class="Div container">
+    <form method="post" action="/add" >
+        <h2>Add Memebers Here</h2>
+        <div class="mb-3">
+          <label for="addEmail" class="form-label">User Email address</label>
+          <input type="email" class="form-control" id="addEmail" aria-describedby="emailHelp" name="addEmail">
+          <div id="emailHelp" class="form-text">We'll never share any email.</div>
+        </div>
+        <div class="container text-center"><button type="submit" class="btn btn-primary">Add</button></div>
+      </form>
+ </div>
+
+<%- include("partials/footer") -%>

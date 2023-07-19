@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+<form action="/register" method="post">
+    <div class="container Div" style="margin-bottom: 34px;">
+        <h2 class="pt-3">Chat Application Register</h2>
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="email" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required name="email">
+          </div>
+          <div class="mb-3 col">
+            <label for="uname" class="form-label">Name</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter the name" required name="uname">
+          </div>
+        </div>
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Password</label>
+            <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter the password" required name="pwd">
+          </div>
+          <!-- <div class="mb-3">
+            <label for="rpwd" class="form-label">Re-enter Password</label>
+            <input type="password" name="rpwd" id="rpwd" class="form-control" placeholder="Enter the password again" required>
+          </div> -->
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Profile</label>
+            <input class="form-control" type="file" id="formFile" name="profile">
+          </div>
+          <div class="container text-center">
+            <button type="submit" class="btn btn-dark mb-3 text-center ">Submit</button>
+          </div>  
+    </div>
+</form>
+
+
+<%- include("partials/footer") -%>

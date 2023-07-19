@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(245, 239, 239);
+}
+.Div{
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 2px 2px 2px 2px;
+}
+.chat{
+    /* padding-top: 5px; */
+    width: 300px !important;
+}
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.log{
+    width: 100% !important;  
+    height: 80% !important;
+}
+.area{
+    height: 64vh;
+}
+.full{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* padding-top: 3px; */
+    margin-bottom: 8px;
+
+}
+
+.recborder{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px;
+    box-shadow: 5px 5px 5px whitesmoke;
+    font-size: 9px; 
+    font-family: 'Courier New', Courier, monospace;
+    width: max-content;
+
+    
+}
+.sendborder{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    box-shadow: 5px 5px 5px black;
+    font-size: 9px;
+    font-family: 'Courier New', Courier, monospace;
+    width: max-content;
+
+}
+.place{
+    height: 42.20vh;
+    overflow: auto;
+    max-width: 350px;
+    width: 100% !important;
+}
+.act{
+    font-size:10px;
+}
+
+.friend{
+    border-bottom: 2px solid;
+}
+.msg{
+    width: max-content !important;
+}
+.bor:focus {
+    outline: none;
+}

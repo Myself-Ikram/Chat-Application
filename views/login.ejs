@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+<div style="margin-bottom: 40px;">
+    <form action="/chat" method="post">
+        <div class="container Div py-3">
+            <h2 class="text-center">Chat Application Login</h2>
+            <p class="text-danger"> <%= msg %> </p>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Enter the password" required>
+              </div>
+              <input type="text" style="display: none;" value="no" name="arrow">
+              <button type="submit" class="btn btn-dark my-3 w-100">Let's Enter into Application</button>
+              <p class="text-center">Dont't have account? <a href="/register">Sign Up</a></p>
+        </div>
+    </form>
+</div>
+<%- include("partials/footer") -%>

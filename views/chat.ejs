@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+<div class="container">
+    <div class="container Div chat com area">
+        <div class="row full bg-dark text-light pt-2">
+            <div class="col-2"><img src="images/1.jpg" alt="image" class="profile"></div>
+            <div class="col-6">
+                    <h6 style="margin-bottom: 0;" class="pt-2"><%= username %></h6>
+                    <p  class="act">Active Now</p>
+            </div>
+            <div class="col-4"><a href="/" class="btn btn-outline-light rounded mt-2 ms-3" ><i class="fa fa-sign-out" aria-hidden="true"></i></a></div>
+        </div>    
+        <hr class="my-1">
+        <div class="container text-center friend py-1">
+            <a href="/add" class="btn btn-outline-dark rounded-pill" id="add"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+        </div>
+        <% friends.forEach(function(friend){ %>
+            <div class="container-flex friend bor">
+                <form action="/com" method="post">
+                    <input type="text" value="<%= username %>" name="sender" style="display: none;" >
+                    <button type="submit" class="btn w-100 pt-1" name="btn" value="<%= friend._id %>">
+                        <div class="row">
+                            <div class="col-2 pt-2 "><img src="images/4.jpg" alt="image" class="profile"></div>
+                            <div class="col-10 text-start pt-3">
+                                    <h6 style="margin-bottom: 0;"> &nbsp; <%= friend.name %></h6>
+                                    <p class="act"> &nbsp;&nbsp;&nbsp; Active Now</p>
+                            </div>
+                        </div>  
+                    </button>
+                </form>
+            </div>
+        <%}) %>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>
